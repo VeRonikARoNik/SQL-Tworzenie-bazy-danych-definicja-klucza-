@@ -12,43 +12,39 @@ I
 2. Utwórz w niej dwie tabele:
 2. Utwórz w niej dwie tabele:
 
-Tabela: Klienci
+### Tabela: Klienci 
 Zawiera informacje o klientach.
 
-Pola:
+### Pola:
+  #### klient_id — klucz główny (PRIMARY KEY)
+  #### imie
+  #### nazwisko
+  #### email
+  #### preferencje
 
-  klient_id — klucz główny (PRIMARY KEY)
-  imie
-  nazwisko
-  email
-  preferencje
-
-Tabela: Zamowienia
+### Tabela: Zamowienia
 Zawiera informacje o zamówieniach złożonych przez klientów.
+  ### Pola:
+  #### zamowienie_id — klucz główny (PRIMARY KEY)
+  #### klient_id — klucz obcy (FOREIGN KEY) wskazujący na klient_id w tabeli Klienci
+  #### data_zamowienia
+  #### kwota
 
-Pola:
-zamowienie_id — klucz główny (PRIMARY KEY)
-klient_id — klucz obcy (FOREIGN KEY) wskazujący na klient_id w tabeli Klienci
-data_zamowienia
-kwota
+### Relacja: jeden klient może mieć wiele zamówień.
 
-Relacja: jeden klient może mieć wiele zamówień.
-
-3. Wstaw dane przykładowe
-
-Minimum 4 klientów
-
-Minimum 4 zamówienia powiązane z klientami
+### 3. Wstaw dane przykładowe
+ #### Minimum 4 klientów
+ #### Minimum 4 zamówienia powiązane z klientami
 
 4. Wykonaj i zapisz poniższe kwerendy SQL:
 
-Wyświetl wszystkich klientów posortowanych alfabetycznie po nazwisku.
+1. Wyświetl wszystkich klientów posortowanych alfabetycznie po nazwisku.
 
-Wyświetl sumę zamówień wykonanych przez każdego klienta.
+2. Wyświetl sumę zamówień wykonanych przez każdego klienta.
 
-Wyświetl zamówienia o wartości większej niż 30 zł.
+3. Wyświetl zamówienia o wartości większej niż 30 zł.
 
-Wyświetl klientów, którzy nie mają żadnych zamówień.
+4. Wyświetl klientów, którzy nie mają żadnych zamówień.
 
 ```
 -- ============================================================
