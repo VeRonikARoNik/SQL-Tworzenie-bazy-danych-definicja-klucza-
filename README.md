@@ -1,6 +1,6 @@
 # Zadanie – SQL: Tworzenie bazy danych, klucz główny i klucz obcy
 
-I
+# I
 
 ## Opis zadania
 
@@ -112,7 +112,7 @@ LEFT JOIN Zamowienia z ON k.klient_id = z.klient_id
 WHERE z.zamowienie_id IS NULL;
 
 ```
-II
+# II
 
 # Zadanie 2 – SQL: Wypożyczalnia Filmów
 
@@ -147,7 +147,7 @@ II
 
 #### 4.Wyświetl filmy, które są aktualnie wypożyczone (data_zwrotu = NULL).
 
-III
+# III
 
 ### Zadanie 3 – SQL: Szkoła Muzyczna
 #### Treść zadania
@@ -176,6 +176,7 @@ III
 #### 2. Wyświetl liczbę lekcji każdego ucznia.
 #### 3. Wyświetl uczniów, którzy mieli lekcję w ostatnich 30 dni.
 #### 4. Wyświetl średni czas lekcji dla każdego instrumentu.
+
 
 Prześlij dokument z zrzutem ekranu działającego programu oraz kod,
 
