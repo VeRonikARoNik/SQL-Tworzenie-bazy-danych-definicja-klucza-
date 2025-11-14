@@ -8,13 +8,12 @@ I
 
 ## Treść zadania
 
-1. Utwórz bazę danych o nazwie KawiarniaDB.
-2. Utwórz w niej dwie tabele:
-2. Utwórz w niej dwie tabele:
+## 1. Utwórz bazę danych o nazwie KawiarniaDB.
+
+## 2. Utwórz w niej dwie tabele:
 
 ### Tabela: Klienci 
-Zawiera informacje o klientach.
-
+### Zawiera informacje o klientach.
 ### Pola:
   #### klient_id — klucz główny (PRIMARY KEY)
   #### imie
@@ -23,7 +22,7 @@ Zawiera informacje o klientach.
   #### preferencje
 
 ### Tabela: Zamowienia
-Zawiera informacje o zamówieniach złożonych przez klientów.
+### Zawiera informacje o zamówieniach złożonych przez klientów.
   ### Pola:
   #### zamowienie_id — klucz główny (PRIMARY KEY)
   #### klient_id — klucz obcy (FOREIGN KEY) wskazujący na klient_id w tabeli Klienci
@@ -36,15 +35,12 @@ Zawiera informacje o zamówieniach złożonych przez klientów.
  #### Minimum 4 klientów
  #### Minimum 4 zamówienia powiązane z klientami
 
-4. Wykonaj i zapisz poniższe kwerendy SQL:
-
-1. Wyświetl wszystkich klientów posortowanych alfabetycznie po nazwisku.
-
-2. Wyświetl sumę zamówień wykonanych przez każdego klienta.
-
-3. Wyświetl zamówienia o wartości większej niż 30 zł.
-
-4. Wyświetl klientów, którzy nie mają żadnych zamówień.
+### 4. Wykonaj i zapisz poniższe kwerendy SQL:
+  
+  #### 1. Wyświetl wszystkich klientów posortowanych alfabetycznie po nazwisku.
+  #### 2. Wyświetl sumę zamówień wykonanych przez każdego klienta.
+  #### 3. Wyświetl zamówienia o wartości większej niż 30 zł.
+  #### 4. Wyświetl klientów, którzy nie mają żadnych zamówień.
 
 ```
 -- ============================================================
@@ -118,77 +114,71 @@ WHERE z.zamowienie_id IS NULL;
 ```
 II
 
-Zadanie 2 – SQL: Wypożyczalnia Filmów
-Treść zadania
+# Zadanie 2 – SQL: Wypożyczalnia Filmów
 
-Utwórz bazę danych FilmyDB zawierającą dwie tabele:
+## Treść zadania
+## 1. Utwórz bazę danych FilmyDB 
 
-Tabela: Filmy
+## 2. Utwórz w niej dwie tabele:
 
-film_id — PRIMARY KEY
-tytul
-gatunek
-rok_produkcji
+### Tabela: Filmy
+  #### film_id — PRIMARY KEY
+  #### tytul
+  #### gatunek
+  #### rok_produkcji
 
-Tabela: Wypozyczenia
-wypozyczenie_id — PRIMARY KEY
-film_id — FOREIGN KEY → Filmy
-data_wypozyczenia
-data_zwrotu (może być NULL)
+### Tabela: Wypozyczenia
+  #### wypozyczenie_id — PRIMARY KEY
+  #### film_id — FOREIGN KEY → Filmy
+  #### data_wypozyczenia
+  #### data_zwrotu (może być NULL)
 
-Wstaw dane:
-minimum 5 filmów,
-minimum 4 wypożyczenia.
+### 3. Wstaw dane:
+#### minimum 5 filmów,
+#### minimum 4 wypożyczenia.
 
-Wykonaj kwerendy:
+### Wykonaj kwerendy:
 
-Wyświetl wszystkie filmy z gatunku "Sci-Fi".
+#### 1.Wyświetl wszystkie filmy z gatunku "Sci-Fi".
 
-Wyświetl filmy, które nigdy nie były wypożyczone.
+#### 2.Wyświetl filmy, które nigdy nie były wypożyczone.
 
-Wyświetl filmy wypożyczone więcej niż 1 raz.
+#### 3.Wyświetl filmy wypożyczone więcej niż 1 raz.
 
-Wyświetl filmy, które są aktualnie wypożyczone (data_zwrotu = NULL).
+#### 4.Wyświetl filmy, które są aktualnie wypożyczone (data_zwrotu = NULL).
 
 III
 
-Zadanie 3 – SQL: Szkoła Muzyczna
-Treść zadania
+### Zadanie 3 – SQL: Szkoła Muzyczna
+#### Treść zadania
+### Utwórz bazę danych MuzykaDB
+## 2. Utwórz w niej dwie tabele:
+#### Tabele przechowują informacje o uczniach i ich lekcjach.
 
-Utwórz bazę danych MuzykaDB, która przechowuje informacje o uczniach i ich lekcjach.
+### Tabela: Uczniowie
+#### uczen_id — PRIMARY KEY
+#### imie
+#### nazwisko
+#### instrument
 
-Tabela: Uczniowie
+### Tabela: Lekcje
+#### lekcja_id — PRIMARY KEY
+#### uczen_id — FOREIGN KEY → Uczniowie
+#### data_lekcji
+#### czas_trwania_min
 
-uczen_id — PRIMARY KEY
+### Wstaw dane:
+#### minimum 4 uczniów,
+#### minimum 4 lekcje.
 
-imie
+### Wykonaj kwerendy:
+#### 1. Wyświetl wszystkich uczniów grających na pianinie.
+#### 2. Wyświetl liczbę lekcji każdego ucznia.
+#### 3. Wyświetl uczniów, którzy mieli lekcję w ostatnich 30 dni.
+#### 4. Wyświetl średni czas lekcji dla każdego instrumentu.
 
-nazwisko
+Prześlij dokument z zrzutem ekranu działającego programu oraz kod,
 
-instrument
+na mail wykonanezadania100@gmail.com
 
-Tabela: Lekcje
-
-lekcja_id — PRIMARY KEY
-
-uczen_id — FOREIGN KEY → Uczniowie
-
-data_lekcji
-
-czas_trwania_min
-
-Wstaw dane:
-
-minimum 4 uczniów,
-
-minimum 4 lekcje.
-
-Wykonaj kwerendy:
-
-Wyświetl wszystkich uczniów grających na pianinie.
-
-Wyświetl liczbę lekcji każdego ucznia.
-
-Wyświetl uczniów, którzy mieli lekcję w ostatnich 30 dni.
-
-Wyświetl średni czas lekcji dla każdego instrumentu.
+podpisz: imię nazwisko i data
